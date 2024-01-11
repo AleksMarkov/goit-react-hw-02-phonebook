@@ -1,0 +1,16 @@
+.list {
+  padding-left: 15px;
+}
+
+.contacts {
+  margin-top: 15px;
+  width: 2400px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 240px;
+  gap: 10px;
+}

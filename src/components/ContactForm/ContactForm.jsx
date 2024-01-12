@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
 
-import styles from './my-phone-form.module.css';
+import styles from './contact-form.module.css';
 
 const INITIAL_STATE = {
   contacts: [],
@@ -9,7 +9,7 @@ const INITIAL_STATE = {
   number: '',
 };
 
-class MyPhoneForm extends Component {
+class ContactForm extends Component {
   phoneBookID = nanoid();
 
   state = {
@@ -39,7 +39,6 @@ class MyPhoneForm extends Component {
     const { name, number } = this.state;
     return (
       <form onSubmit={handleSubmit}>
-        <h2>Phonebook</h2>
         <div className={styles.phonebook}>
           <label htmlFor={phoneBookID}>Name</label>
           <input
@@ -70,4 +69,4 @@ class MyPhoneForm extends Component {
   }
 }
 
-export default MyPhoneForm;
+export default ContactForm;

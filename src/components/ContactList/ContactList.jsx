@@ -1,6 +1,6 @@
-import styles from './my-phone-list.module.css';
+import styles from './contact-list.module.css';
 
-const MyPhoneList = ({ items, deleteContact, changeFilter }) => {
+const MyPhoneList = ({ items, deleteContact }) => {
   const elements = items.map(({ id, name, number }) => (
     <li key={id} className={styles.contacts}>
       {name}: {number}{' '}
@@ -11,8 +11,7 @@ const MyPhoneList = ({ items, deleteContact, changeFilter }) => {
   ));
   return (
     <>
-      <h2>Contacts</h2>
-      <div className={styles.filter}>
+      {/* <div className={styles.filter}>
         <label htmlFor="filterID">Find contacts by name</label>
         <input
           onChange={changeFilter}
@@ -20,7 +19,7 @@ const MyPhoneList = ({ items, deleteContact, changeFilter }) => {
           name="filter"
           placeholder="Search"
         />
-      </div>
+      </div> */}
       <ul className={styles.list}>{elements}</ul>
     </>
   );
